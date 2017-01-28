@@ -10,14 +10,21 @@ gem 'turbolinks',   '~> 2.5.3'
 
 gem 'devise',       '~> 3.5.2'
 gem 'devise-bootstrap-views', '~> 0.0.6'
-gem 'rails_12factor', group: :production
+
+group :development do
+	  gem 'sqlite3'
+	end
+
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+
+
